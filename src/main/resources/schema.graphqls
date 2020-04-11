@@ -1,0 +1,15 @@
+type Author {
+    name: String!
+    profession: String!
+    posts: [Post]
+}
+
+type Post {
+    title: String!
+    author: Author
+    createdOn: String!
+}
+
+type Query {
+    getAllAuthors(): [Author]
+}
