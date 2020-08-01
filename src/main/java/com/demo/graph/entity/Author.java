@@ -3,27 +3,35 @@ package com.demo.graph.entity;
 import lombok.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
-@Setter
-@Builder
+@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     private String name;
 
-    private String profession;
+    private int age;
 
-    private List<Post> posts;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "author", cascade = CascadeType.ALL)
+    private List<Book> books;
 
-    public interface Repo extends JpaRepository<Author, Integer> {}
+    public Author(Long authorId) {
+        this.id = id;
+    }
+
+    public String toString() {
+        return "Name : "+name;
+    }
+
+    public interface Repo extends JpaRepository<Author, Long> { }
 }
 
