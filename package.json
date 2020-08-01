@@ -1,0 +1,28 @@
+{
+  "name": "graphql-springboot",
+  "version": "1.0.0",
+  "description": "Library using graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run mocha-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishnusr90/GraphQL-SpringBoot.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "Vishnu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishnusr90/GraphQL-SpringBoot/issues"
+  },
+  "homepage": "https://github.com/vishnusr90/GraphQL-SpringBoot#readme",
+  "dependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "lit-html": "^1.2.1"
+  }
+}
