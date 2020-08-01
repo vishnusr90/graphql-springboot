@@ -22,6 +22,12 @@ public class BookService {
         Book book = new Book();
         book.setTitle(title);
 
+        Book existingBook = bookRepository.findBookByTitle(title);
+
+        if (existingBook != null) {
+            return null;
+        }
+
         Author author = authorRepository.getOne(authorId);
         book.setAuthor(author);
         return bookRepository.save(book);

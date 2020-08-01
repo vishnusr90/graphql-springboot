@@ -9,5 +9,5 @@ extend type Query {
 }
 
 extend type Mutation {
-    createBook(title: String!, authorId: ID!): Book!
+    createBook(title: String!, authorId: ID!): Book
 }

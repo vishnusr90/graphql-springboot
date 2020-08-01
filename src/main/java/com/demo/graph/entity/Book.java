@@ -22,5 +22,7 @@ public class Book {
     @JoinColumn(name = "author_id", nullable = false, updatable = false)
     private Author author;
 
-    public interface Repo extends JpaRepository<Book, Long>{}
+    public interface Repo extends JpaRepository<Book, Long>{
+        Book findBookByTitle(String title);
+    }
 }
