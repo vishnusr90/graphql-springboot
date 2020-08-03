@@ -1,11 +1,9 @@
 package com.demo.graph.entity;
 
-import lombok.*;
+import lombok.Data;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Entity
@@ -18,11 +16,15 @@ public class Book {
 
     private String title;
 
+    public String publication;
+
+    private int pages;
+
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id", nullable = false, updatable = false)
     private Author author;
 
-    public interface Repo extends JpaRepository<Book, Long>{
+    public interface Repo extends JpaRepository<Book, Long> {
         Book findBookByTitle(String title);
     }
 }

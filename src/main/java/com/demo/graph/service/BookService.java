@@ -18,9 +18,11 @@ public class BookService {
         return this.bookRepository.findAll();
     }
 
-    public Book addBook(String title, Long authorId) {
+    public Book addBook(String title, int pages, String publication, Long authorId) {
         Book book = new Book();
         book.setTitle(title);
+        book.setPages(pages);
+        book.setPublication(publication);
 
         Book existingBook = bookRepository.findBookByTitle(title);
 

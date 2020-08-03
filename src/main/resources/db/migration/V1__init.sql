@@ -10,5 +10,7 @@ CREATE TABLE IF NOT EXISTS AUTHOR (
 
 CREATE TABLE IF NOT EXISTS BOOK (
     id long NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    title varchar(20) NOT NULL
+    title varchar(20) NOT NULL,
+    publication varchar(20) NOT NULL,
+    pages int NOT NULL
 );

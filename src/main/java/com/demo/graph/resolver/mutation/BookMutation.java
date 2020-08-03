@@ -16,7 +16,7 @@ public class BookMutation implements GraphQLMutationResolver {
     private BookService bookService;
 
     @Transactional
-    public Book createBook(String title, Long authorId) {
-        return this.bookService.addBook(title, authorId);
+    public Book createBook(final String title, final int pages, final String publication, Long authorId) {
+        return this.bookService.addBook(title, pages, publication, authorId);
     }
 }
