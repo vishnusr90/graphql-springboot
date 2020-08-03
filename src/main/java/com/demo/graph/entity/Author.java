@@ -1,10 +1,11 @@
 package com.demo.graph.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -17,9 +18,15 @@ public class Author {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String firstName;
+
+    private String lastName;
 
     private int age;
+
+    private String country;
+
+    private String emailId;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "author", cascade = CascadeType.ALL)
     private List<Book> books;
@@ -29,9 +36,10 @@ public class Author {
     }
 
     public String toString() {
-        return "Name : "+name;
+        return "Name : " + firstName + " " + lastName;
     }
 
-    public interface Repo extends JpaRepository<Author, Long> { }
+    public interface Repo extends JpaRepository<Author, Long> {
+    }
 }
 

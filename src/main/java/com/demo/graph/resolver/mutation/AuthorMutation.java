@@ -14,10 +14,7 @@ public class AuthorMutation implements GraphQLMutationResolver {
     private AuthorService authorService;
 
     @Transactional
-    public Author createAuthor(final String name, final Integer age) {
-        return this.authorService.addAuthor(name, age);
+    public Author createAuthor(final String firstName, final String lastName, final Integer age, final String country, final String emailId) {
+        return this.authorService.addAuthor(firstName, lastName, age, country, emailId);
     }
-
-
-
 }

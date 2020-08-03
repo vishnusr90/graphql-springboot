@@ -18,10 +18,13 @@ public class AuthorService {
     }
 
     @Transactional
-    public Author addAuthor(String name, int age) {
+    public Author addAuthor(String firstName, String lastName, int age, String country, String emailId) {
         Author author = new Author();
-        author.setName(name);
+        author.setFirstName(firstName);
+        author.setLastName(lastName);
         author.setAge(age);
+        author.setCountry(country);
+        author.setEmailId(emailId);
         return this.authorRepository.save(author);
     }
 }

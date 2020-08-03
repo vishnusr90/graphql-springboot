@@ -1,7 +1,10 @@
 type Author {
     id: ID!
-    name: String!
+    firstName: String!
+    lastName: String!
     age: Int
+    country: String!
+    emailId: String!
     books: [Book]
 }
 
@@ -12,5 +15,5 @@ type Query {
 
 # Root
 type Mutation {
-    createAuthor(name: String!, age: Int): Author!
+    createAuthor(firstName: String!, lastName: String!, age: Int, country: String!, emailId: String!): Author!
 }
