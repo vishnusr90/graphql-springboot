@@ -1,7 +1,7 @@
 
-![](src\main\resources\images\img.png)
+![](src/main/resources/images/img.png)
 
-#Demo project using graphql and spring boot
+# Demo project using graphql and spring boot
 
 ## Dependency
 
