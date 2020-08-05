@@ -2,15 +2,15 @@ package com.demo.graph.service;
 
 import com.demo.graph.entity.Author;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
 public class AuthorService {
-
+    @Autowired
     private Author.Repo authorRepository;
 
     public List<Author> getAllAuthors() {

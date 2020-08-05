@@ -1,10 +1,10 @@
 CREATE TABLE IF NOT EXISTS AUTHOR (
     id long NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    firstName varchar(20) NOT NULL,
-    lastName varchar(20),
+    first_name varchar(20) NOT NULL,
+    last_name varchar(20),
     age int NOT NULL,
     country varchar(20),
-    emailId varchar(20)
+    email_id varchar(20)
 );
 
 
