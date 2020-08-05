@@ -1,4 +1,3 @@
-
 ![](src/main/resources/images/img.png)
 
 # Demo project using graphql and spring boot
