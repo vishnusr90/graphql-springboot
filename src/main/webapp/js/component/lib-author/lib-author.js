@@ -1,6 +1,7 @@
 import {BaseComponent, html} from "../../base-component.js";
 
 const htmlTemplate = (authorList) => html`
+    <link rel="stylesheet" type="text/css" href="/js/common/common.css">
     <h2 style="text-align: left">Authors</h2>
     <table>
         <thead>
