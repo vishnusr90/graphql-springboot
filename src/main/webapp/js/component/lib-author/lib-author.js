@@ -1,13 +1,15 @@
 import {BaseComponent, html} from "../../base-component.js";
 
 const htmlTemplate = (authorList) => html`
-    <link rel="stylesheet" type="text/css" href="/js/common/common.css">
+    <link rel="stylesheet" type="text/css" href="/library/js/common/common.css">
     <h2 style="text-align: left">Authors</h2>
     <table>
         <thead>
-            <th>Name</th>
-            <th>Country</th>
-            <th>Email Address</th>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Email Address</th>
+            </tr>
         </thead>
         <tbody>
             ${authorList.map(author => row(author))}
